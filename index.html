@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pocket Account - Simple Khata Book | R&DC Software</title>
+    <meta name="description" content="Pocket Account is a simple, secure, offline-first khata app for managing creditor and debtor accounts. No internet required. Your data stays on your device.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: #f8f9fa;
+        }
+        a { color: #1a73e8; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+            color: #fff;
+            text-align: center;
+            padding: 80px 20px 60px;
+        }
+        .hero-icon {
+            width: 100px;
+            height: 100px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 24px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            margin-bottom: 24px;
+        }
+        .hero h1 {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .hero .tagline {
+            font-size: 20px;
+            opacity: 0.9;
+            margin-bottom: 32px;
+            font-weight: 300;
+        }
+        .hero-badges {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 36px;
+        }
+        .badge {
+            background: rgba(255,255,255,0.2);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .cta-btn {
+            display: inline-block;
+            background: #fff;
+            color: #1a73e8;
+            padding: 14px 36px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cta-btn:hover {
+            text-decoration: none;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Features */
+        .features {
+            padding: 64px 0;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            color: #202124;
+            margin-bottom: 48px;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        .feature-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 32px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: #e8f0fe;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+        .feature-card h3 {
+            font-size: 18px;
+            color: #202124;
+            margin-bottom: 8px;
+        }
+        .feature-card p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Privacy Strip */
+        .privacy-strip {
+            background: #e8f5e9;
+            padding: 48px 0;
+            text-align: center;
+        }
+        .privacy-strip h2 {
+            font-size: 24px;
+            color: #1b5e20;
+            margin-bottom: 24px;
+        }
+        .privacy-points {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .privacy-point {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 15px;
+            color: #2e7d32;
+            font-weight: 500;
+        }
+        .privacy-point .check {
+            width: 28px;
+            height: 28px;
+            background: #2e7d32;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* Languages */
+        .languages {
+            padding: 48px 0;
+            text-align: center;
+        }
+        .lang-tags {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .lang-tag {
+            background: #fff;
+            border: 2px solid #e8e8e8;
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        /* Designed For */
+        .designed-for {
+            padding: 48px 0 64px;
+        }
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 24px;
+        }
+        .audience-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 24px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .audience-card .icon {
+            font-size: 36px;
+            margin-bottom: 12px;
+        }
+        .audience-card h4 {
+            font-size: 15px;
+            color: #202124;
+            margin-bottom: 4px;
+        }
+        .audience-card p {
+            font-size: 13px;
+            color: #888;
+        }
+
+        /* Footer */
+        .footer {
+            background: #202124;
+            color: #aaa;
+            padding: 40px 0;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 32px;
+        }
+        .footer-brand h3 {
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+        .footer-brand p {
+            font-size: 14px;
+        }
+        .footer-links {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+        .footer-links a {
+            color: #aaa;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+        .footer-bottom {
+            text-align: center;
+            margin-top: 32px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .hero { padding: 60px 16px 40px; }
+            .hero h1 { font-size: 28px; }
+            .hero .tagline { font-size: 16px; }
+            .section-title { font-size: 22px; }
+            .privacy-points { flex-direction: column; align-items: center; gap: 16px; }
+            .footer-content { flex-direction: column; align-items: center; text-align: center; }
+            .footer-links { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-icon">&#128213;</div>
+        <h1>Pocket Account</h1>
+        <p class="tagline">Simple Khata Book for Creditor &amp; Debtor Management</p>
+        <div class="hero-badges">
+            <span class="badge">Offline First</span>
+            <span class="badge">100% Secure</span>
+            <span class="badge">AES-256 Encrypted</span>
+            <span class="badge">Free to Use</span>
+        </div>
+        <a href="https://play.google.com/store/apps/details?id=com.rndcsoftware.pocket_account_app" class="cta-btn">Download on Google Play</a>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Everything You Need to Manage Your Khata</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">&#128210;</div>
+                    <h3>Party Management</h3>
+                    <p>Add creditors and debtors with full details &mdash; name, phone, email, GSTIN, PAN, address. Import parties from contacts or Excel files.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#128176;</div>
+                    <h3>Transaction Tracking</h3>
+                    <p>Record payments given and received. Track real-time balances for each party. Add descriptions, voucher numbers, and organize by financial year.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#127974;</div>
+                    <h3>Payment Accounts</h3>
+                    <p>Manage multiple cash and bank accounts. Track account-wise balances and record account-to-account transfers.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#128202;</div>
+                    <h3>Reports &amp; PDF</h3>
+                    <p>Generate party-wise ledger reports. Export as PDF. Share reports via WhatsApp, email, or any app on your device.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#128274;</div>
+                    <h3>Security &amp; Privacy</h3>
+                    <p>4-digit PIN lock with biometric support. All data stored locally. AES-256 encrypted backups. No data ever sent to any server.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#128190;</div>
+                    <h3>Backup &amp; Restore</h3>
+                    <p>Automatic encrypted backups to Google Drive or email. Manual backup and restore with password protection. Never lose your data.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#128197;</div>
+                    <h3>Financial Year</h3>
+                    <p>Create and manage multiple financial years. Year-end closing with automatic balance carry forward. Opening balance management.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#128184;</div>
+                    <h3>Interest Calculation</h3>
+                    <p>Set interest rates for each party. Calculate simple and compound interest. Keep track of outstanding amounts with interest.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#128241;</div>
+                    <h3>Easy Sharing</h3>
+                    <p>Share ledger reports, PDFs, and backup files directly via WhatsApp, email, or any sharing app on your device.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Strip -->
+    <section class="privacy-strip">
+        <div class="container">
+            <h2>Your Data, Your Control</h2>
+            <div class="privacy-points">
+                <div class="privacy-point">
+                    <span class="check">&#10003;</span>
+                    <span>No data sent to servers</span>
+                </div>
+                <div class="privacy-point">
+                    <span class="check">&#10003;</span>
+                    <span>100% offline capable</span>
+                </div>
+                <div class="privacy-point">
+                    <span class="check">&#10003;</span>
+                    <span>AES-256 encrypted backups</span>
+                </div>
+                <div class="privacy-point">
+                    <span class="check">&#10003;</span>
+                    <span>No tracking or analytics</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages -->
+    <section class="languages">
+        <div class="container">
+            <h2 class="section-title">Multi-Language Support</h2>
+            <div class="lang-tags">
+                <div class="lang-tag">English</div>
+                <div class="lang-tag">&#2361;&#2367;&#2344;&#2381;&#2342;&#2368; (Hindi)</div>
+                <div class="lang-tag">&#2711;&#2753;&#2716;&#2736;&#2750;&#2724;&#2752; (Gujarati)</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Designed For -->
+    <section class="designed-for">
+        <div class="container">
+            <h2 class="section-title">Designed For</h2>
+            <div class="audience-grid">
+                <div class="audience-card">
+                    <div class="icon">&#127978;</div>
+                    <h4>Small Business Owners</h4>
+                    <p>Track your daily transactions</p>
+                </div>
+                <div class="audience-card">
+                    <div class="icon">&#128722;</div>
+                    <h4>Shopkeepers</h4>
+                    <p>Manage customer khata easily</p>
+                </div>
+                <div class="audience-card">
+                    <div class="icon">&#128188;</div>
+                    <h4>Freelancers</h4>
+                    <p>Keep client payment records</p>
+                </div>
+                <div class="audience-card">
+                    <div class="icon">&#128100;</div>
+                    <h4>Individuals</h4>
+                    <p>Track personal lending &amp; borrowing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>R&amp;DC Software</h3>
+                    <p>Pocket Account &mdash; Simple Khata Book</p>
+                </div>
+                <div class="footer-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="data-deletion.html">Data Deletion</a>
+                    <a href="mailto:support@rndcsoftware.com">Contact Us</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 R&amp;DC Software. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
