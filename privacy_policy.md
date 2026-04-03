@@ -2,8 +2,8 @@
 
 **Last Updated:** April 2, 2026
 **Developer:** Rahul Patel, R&DC Software Development
-**Contact:** contact@rndcsoftware.com | +91 97277 49009
-**Website:** https://www.rndcsoftware.com
+**Contact:** rndcsoftware@gmail.com | +91 97277 49009
+**Website:** https://rahul9009.github.io/pocket_account/
 
 ---
 
@@ -71,9 +71,9 @@ We may update this Privacy Policy from time to time. Changes will be reflected i
 
 If you have questions about this Privacy Policy, contact us at:
 
-- **Email:** contact@rndcsoftware.com
+- **Email:** rndcsoftware@gmail.com
 - **Phone:** +91 97277 49009
-- **Website:** https://www.rndcsoftware.com
+- **Website:** https://rahul9009.github.io/pocket_account/
 
 ---
 
