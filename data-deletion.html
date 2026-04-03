@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Deletion - Pocket Account | R&DC Software</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: #f8f9fa;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+        h1 {
+            color: #1a73e8;
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 32px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e8e8e8;
+        }
+        h2 {
+            color: #202124;
+            font-size: 20px;
+            margin-top: 28px;
+            margin-bottom: 12px;
+        }
+        p { margin-bottom: 14px; }
+        .info-box {
+            background: #e8f0fe;
+            border-left: 4px solid #1a73e8;
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+        .info-box p { margin-bottom: 0; }
+        .steps {
+            list-style: none;
+            counter-reset: step;
+            margin: 20px 0;
+        }
+        .steps li {
+            counter-increment: step;
+            padding: 12px 16px 12px 56px;
+            position: relative;
+            margin-bottom: 8px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .steps li::before {
+            content: counter(step);
+            position: absolute;
+            left: 16px;
+            top: 12px;
+            width: 28px;
+            height: 28px;
+            background: #1a73e8;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+        }
+        .data-table th, .data-table td {
+            text-align: left;
+            padding: 10px 14px;
+            border-bottom: 1px solid #e8e8e8;
+        }
+        .data-table th {
+            background: #f1f3f4;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        .data-table td { font-size: 14px; }
+        .tag-deleted {
+            background: #e6f4ea;
+            color: #137333;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .tag-manual {
+            background: #fef7e0;
+            color: #b06000;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .contact {
+            margin-top: 32px;
+            padding-top: 20px;
+            border-top: 1px solid #e8e8e8;
+            font-size: 14px;
+            color: #666;
+        }
+        .contact a { color: #1a73e8; text-decoration: none; }
+        .contact a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Data Deletion</h1>
+            <p class="subtitle">Pocket Account by R&DC Software &bull; Last updated: April 3, 2026</p>
+
+            <div class="info-box">
+                <p><strong>Pocket Account is an offline-first app.</strong> All your financial data is stored locally on your device. We do not store any user data on our servers.</p>
+            </div>
+
+            <h2>How to Delete Your Data</h2>
+            <p>You can permanently delete all your data from within the app by following these steps:</p>
+
+            <ol class="steps">
+                <li>Open the <strong>Pocket Account</strong> app on your device</li>
+                <li>Go to <strong>Settings</strong> (gear icon)</li>
+                <li>Tap <strong>"Clear All Data"</strong></li>
+                <li>Confirm the deletion when prompted</li>
+            </ol>
+
+            <p>This action is <strong>immediate and irreversible</strong>. No data can be recovered after deletion unless you have a backup file.</p>
+
+            <h2>What Gets Deleted</h2>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Data Type</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>All transactions (payments, receipts)</td>
+                        <td><span class="tag-deleted">Deleted</span></td>
+                    </tr>
+                    <tr>
+                        <td>All party records (creditors, debtors)</td>
+                        <td><span class="tag-deleted">Deleted</span></td>
+                    </tr>
+                    <tr>
+                        <td>All payment accounts (cash, bank)</td>
+                        <td><span class="tag-deleted">Deleted</span></td>
+                    </tr>
+                    <tr>
+                        <td>All financial year data</td>
+                        <td><span class="tag-deleted">Deleted</span></td>
+                    </tr>
+                    <tr>
+                        <td>App settings and preferences</td>
+                        <td><span class="tag-deleted">Deleted</span></td>
+                    </tr>
+                    <tr>
+                        <td>Google Drive backup files (if enabled)</td>
+                        <td><span class="tag-manual">Delete manually from Google Drive</span></td>
+                    </tr>
+                    <tr>
+                        <td>Email backup files (if enabled)</td>
+                        <td><span class="tag-manual">Delete manually from your email</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Alternative: Uninstall the App</h2>
+            <p>Uninstalling Pocket Account from your device will also remove all locally stored data, including the database, settings, and cached files.</p>
+
+            <h2>Data We Do Not Store</h2>
+            <p>Since Pocket Account does not collect or store any data on remote servers, there is no server-side data to delete. Your data exists only on your device.</p>
+
+            <div class="contact">
+                <h2>Contact Us</h2>
+                <p>If you have any questions about data deletion, please contact us:</p>
+                <p>
+                    <strong>R&DC Software</strong><br>
+                    Email: <a href="mailto:support@rndcsoftware.com">support@rndcsoftware.com</a><br>
+                    Website: <a href="https://www.rndcsoftware.com">www.rndcsoftware.com</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

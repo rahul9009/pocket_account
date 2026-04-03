@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Pocket Account | R&DC Software</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: #f8f9fa;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+        h1 {
+            color: #1a73e8;
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 32px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e8e8e8;
+        }
+        h2 {
+            color: #202124;
+            font-size: 20px;
+            margin-top: 28px;
+            margin-bottom: 12px;
+        }
+        p { margin-bottom: 14px; }
+        ul {
+            margin: 12px 0 16px 24px;
+        }
+        ul li {
+            margin-bottom: 6px;
+            font-size: 15px;
+        }
+        .info-box {
+            background: #e8f0fe;
+            border-left: 4px solid #1a73e8;
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+        .info-box p { margin-bottom: 0; }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+        }
+        .data-table th, .data-table td {
+            text-align: left;
+            padding: 10px 14px;
+            border-bottom: 1px solid #e8e8e8;
+        }
+        .data-table th {
+            background: #f1f3f4;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        .data-table td { font-size: 14px; }
+        .section {
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid #f0f0f0;
+        }
+        .contact {
+            margin-top: 32px;
+            padding-top: 20px;
+            border-top: 1px solid #e8e8e8;
+            font-size: 14px;
+            color: #666;
+        }
+        .contact a { color: #1a73e8; text-decoration: none; }
+        .contact a:hover { text-decoration: underline; }
+        .footer {
+            text-align: center;
+            margin-top: 24px;
+            font-size: 13px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Privacy Policy</h1>
+            <p class="subtitle">Pocket Account by R&DC Software &bull; Last updated: April 2, 2026</p>
+
+            <div class="info-box">
+                <p><strong>Pocket Account is an offline-first app.</strong> We do not collect any personal data. All your financial data is stored locally on your device and is never sent to any external server.</p>
+            </div>
+
+            <h2>Overview</h2>
+            <p>Pocket Account ("the App") is an offline-first personal accounting application. We are committed to protecting your privacy. This policy explains what data the App handles and how.</p>
+
+            <div class="section">
+                <h2>Data Stored on Your Device</h2>
+                <p>The App stores the following information <strong>locally on your device only</strong>:</p>
+                <ul>
+                    <li><strong>Party details</strong> &mdash; name, phone, email, GSTIN, PAN, address</li>
+                    <li><strong>Transaction records</strong> &mdash; payments, receipts, transfers</li>
+                    <li><strong>Payment account details</strong> &mdash; cash, bank accounts</li>
+                    <li><strong>App preferences</strong> &mdash; language, mPIN hash, biometric settings</li>
+                </ul>
+                <p>All data is stored in a local SQLite database within the App's private storage area.</p>
+            </div>
+
+            <div class="section">
+                <h2>Data Encryption</h2>
+                <ul>
+                    <li>Your mPIN is protected using <strong>PBKDF2-HMAC-SHA256</strong> with 100,000 iterations and a unique random salt</li>
+                    <li>Backup files are encrypted using <strong>AES-256-CBC</strong> with password-based key derivation</li>
+                    <li>The App does not store your backup password anywhere</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Permissions Used</h2>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Permission</th>
+                            <th>Purpose</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Contacts (READ_CONTACTS)</td>
+                            <td>Optional &mdash; only used when you choose to import parties from your phone contacts</td>
+                        </tr>
+                        <tr>
+                            <td>Biometric (USE_BIOMETRIC)</td>
+                            <td>Optional &mdash; used for fingerprint/face unlock if you enable it</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>No permissions are required for the App's core functionality.</p>
+            </div>
+
+            <div class="section">
+                <h2>Third-Party Services</h2>
+                <p>The App does not use any third-party services including:</p>
+                <ul>
+                    <li>No analytics or tracking (no Google Analytics, Firebase Analytics, etc.)</li>
+                    <li>No advertising SDKs</li>
+                    <li>No crash reporting services</li>
+                    <li>No cloud storage or sync services</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Data Sharing</h2>
+                <p>We do not share your data with any third party. When you choose to share a PDF report or backup file, you control where it goes via Android's standard share mechanism.</p>
+            </div>
+
+            <div class="section">
+                <h2>Data Deletion</h2>
+                <p>You can delete all your data at any time:</p>
+                <ul>
+                    <li><strong>Settings &gt; Clear Data</strong> &mdash; Remove specific data (payments, receipts, parties, or everything)</li>
+                    <li><strong>Uninstalling the App</strong> removes all locally stored data permanently</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Children's Privacy</h2>
+                <p>The App does not knowingly collect or store information from children under 13. The App is a general-purpose financial tool with no age-restricted content.</p>
+            </div>
+
+            <div class="section">
+                <h2>Changes to This Policy</h2>
+                <p>We may update this Privacy Policy from time to time. Changes will be reflected in the "Last Updated" date above. Continued use of the App constitutes acceptance of the updated policy.</p>
+            </div>
+
+            <div class="contact">
+                <h2>Contact Us</h2>
+                <p>If you have questions about this Privacy Policy, contact us at:</p>
+                <p>
+                    <strong>R&DC Software</strong><br>
+                    Rahul Patel<br>
+                    Email: <a href="mailto:contact@rndcsoftware.com">contact@rndcsoftware.com</a><br>
+                    Phone: <a href="tel:+919727749009">+91 97277 49009</a><br>
+                    Website: <a href="https://www.rndcsoftware.com">www.rndcsoftware.com</a>
+                </p>
+            </div>
+        </div>
+        <p class="footer">&copy; 2026 R&DC Software Development. All rights reserved.</p>
+    </div>
+</body>
+</html>
